@@ -1,0 +1,36 @@
+{
+  "name": "campusride",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Campus Mobility — Exclusive ride booking & transportation management platform powered by genuine Data Structures & Algorithms",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "test": "npm run test --prefix server",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.68.7",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "campus-mobility",
+    "data-structures",
+    "algorithms",
+    "react",
+    "express",
+    "typescript",
+    "dijkstra",
+    "priority-queue",
+    "binary-heap"
+  ],
+  "author": "CampusRide Team",
+  "license": "MIT"
+}
